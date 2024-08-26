@@ -1,8 +1,16 @@
 import Login from './component/Login';
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import EmptyPage from './component/EmptyPage';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
   return (
-    <Login></Login>
+    <BrowserRouter>
+    <Routes>
+      <Route path='/login' element={<Login/>} />
+      <Route path='/forgot' element={<Login/>} />
+      <Route path='/signIn' element={<Login/>} />
+      <Route path='*' element={<EmptyPage/>} />
+    </Routes>
+    </BrowserRouter>
   );
 }
 
