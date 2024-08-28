@@ -79,7 +79,7 @@ export default function Login() {
         <div className="form-signin w-100 m-auto">
             <form onSubmit={handleSubmit}>
             <img className="mb-4" src= {logo} alt="" width="300" height="300"/>
-            <FloatingInputBox id="loginId" type = "email" placeholder="name@example.com" label = "Email address" value = {address} onChange={handleAddressChange}/>
+            <FloatingInputBox id="loginId" placeholder="name@example.com" label = "Email address" value = {address} onChange={handleAddressChange}/>
             <FloatingInputBox id="loginPassword" type = "password" placeholder="Password" label = "Password" value = {password} onChange={handlePasswordChange}/>
             <div className="form-check text-start my-3">
                 <input className="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault" checked={rememberMe} onChange={handleRememberMeChange}/>
@@ -89,7 +89,7 @@ export default function Login() {
                 <Link to="/forgot" className="password-forgot-link">forgot password?</Link>
             </div>
             <button className="btn btn-primary w-100 py-2">Sign in</button>
-            <Link to="/signIn" style={{float: 'right',fontSize: '14px',marginTop: '5px'}}>Sign Up</Link>
+            <Link to="/signup" style={{float: 'right',fontSize: '14px',marginTop: '5px'}}>Sign Up</Link>
         </form>
         {errorMessage && <ErrorAlert message={errorMessage} callback={() => setErrorMessage(null)} />}
         </div>
